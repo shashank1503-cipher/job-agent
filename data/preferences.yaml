@@ -17,7 +17,6 @@ preferences:
   # Jobs listed as plain "Remote" with no country are allowed through.
   remote_locations:
     - "India"
-    - "IN"
 
   current_salary_lpa: 25
   expected_salary_lpa: 30

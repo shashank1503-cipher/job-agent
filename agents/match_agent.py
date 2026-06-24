@@ -54,10 +54,11 @@ def _score_job(job: dict, prefs: dict) -> dict:
     # country/region are hard-rejected. Plain "Remote" with no country passes.
     remote_locations = prefs.get("remote_locations", [])
     if remote_locations and "remote" in loc_norm:
-        loc_without_remote = loc_norm.replace("remote", "").strip(" ,·-–")
+        loc_without_remote = loc_norm.replace("remote", "").strip()
         if loc_without_remote:  # there's a country/region specified
             allowed = [_norm(r) for r in remote_locations]
-            if not any(r in loc_norm for r in allowed):
+            loc_words = set(loc_without_remote.split())
+            if not any(r in loc_words for r in allowed):
                 return {
                     "score": 0,
                     "reasons": [f"Remote job outside allowed region: {location}"],
