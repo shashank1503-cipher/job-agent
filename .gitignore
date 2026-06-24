@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+
+# Environment — never commit secrets
+.env
+
+# Test / hypothesis cache
+.pytest_cache/
+.hypothesis/
+
+# Generated outputs
+output/
+api_responses.json
+page_dump.html
+
+# Root-level data cache files (copies of data/)
+companies.json
+lever_companies.json
+
+# Claude Code local settings
+.claude/settings.local.json
