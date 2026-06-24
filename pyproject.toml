@@ -1,0 +1,21 @@
+[project]
+name = "job-agent"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "docx2pdf>=0.1.8",
+    "dotenv>=0.9.9",
+    "httpx>=0.28.1",
+    "pandas>=2.3.3",
+    "pdfplumber>=0.11.9",
+    "playwright>=1.60.0",
+    "pytest>=9.0.3",
+    "pytest-mock>=3.15.1",
+    "python-docx>=1.2.0",
+    "python-jobspy>=1.1.82",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

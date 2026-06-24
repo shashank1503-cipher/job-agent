@@ -1,0 +1,1409 @@
+[
+  {
+    "url": "https://js-ha.simplify.jobs/collections/jobs/documents/search?q=&query_by=seasons&facet_by=seasons&max_facet_values=1000&use_cache=true&x-typesense-api-key=SWF1ODFZbzBkcVlVdnVwT2FqUE5EZ3JpSk5hVmdpUHg1SklXWEdGbHZVRT1POHJieyJleGNsdWRlX2ZpZWxkcyI6ImNvbXBhbnlfdXJsLGNhdGVnb3JpZXMsYWRkaXRpb25hbF9yZXF1aXJlbWVudHMsY291bnRyaWVzLGRlZ3JlZXMsZ2VvbG9jYXRpb25zLGluZHVzdHJpZXMsaXNfc2ltcGxlX2FwcGxpY2F0aW9uLGpvYl9saXN0cyxsZWFkZXJzaGlwX3R5cGUsc2VjdXJpdHlfY2xlYXJhbmNlLHNraWxscyx1cmwifQ%3D%3D",
+    "data": {
+      "facet_counts": [
+        {
+          "counts": [
+            {
+              "count": 680422,
+              "highlighted": "N/A",
+              "value": "N/A"
+            },
+            {
+              "count": 7151,
+              "highlighted": "Summer 2026",
+              "value": "Summer 2026"
+            },
+            {
+              "count": 1800,
+              "highlighted": "Fall 2026",
+              "value": "Fall 2026"
+            },
+            {
+              "count": 308,
+              "highlighted": "Winter 2026",
+              "value": "Winter 2026"
+            },
+            {
+              "count": 307,
+              "highlighted": "Summer 2027",
+              "value": "Summer 2027"
+            },
+            {
+              "count": 305,
+              "highlighted": "Spring 2026",
+              "value": "Spring 2026"
+            },
+            {
+              "count": 273,
+              "highlighted": "Winter 2027",
+              "value": "Winter 2027"
+            },
+            {
+              "count": 202,
+              "highlighted": "Spring 2027",
+              "value": "Spring 2027"
+            },
+            {
+              "count": 72,
+              "highlighted": "Winter 2025",
+              "value": "Winter 2025"
+            },
+            {
+              "count": 57,
+              "highlighted": "Fall 2025",
+              "value": "Fall 2025"
+            },
+            {
+              "count": 42,
+              "highlighted": "Summer 2025",
+              "value": "Summer 2025"
+            },
+            {
+              "count": 41,
+              "highlighted": "Fall 2027",
+              "value": "Fall 2027"
+            },
+            {
+              "count": 38,
+              "highlighted": "Winter 2024",
+              "value": "Winter 2024"
+            },
+            {
+              "count": 16,
+              "highlighted": "Spring 2025",
+              "value": "Spring 2025"
+            },
+            {
+              "count": 14,
+              "highlighted": "Winter 2028",
+              "value": "Winter 2028"
+            },
+            {
+              "count": 11,
+              "highlighted": "Spring 2028",
+              "value": "Spring 2028"
+            },
+            {
+              "count": 10,
+              "highlighted": "Summer 2028",
+              "value": "Summer 2028"
+            },
+            {
+              "count": 9,
+              "highlighted": "Summer 2024",
+              "value": "Summer 2024"
+            },
+            {
+              "count": 4,
+              "highlighted": "Spring 2024",
+              "value": "Spring 2024"
+            },
+            {
+              "count": 3,
+              "highlighted": "Fall 2028",
+              "value": "Fall 2028"
+            },
+            {
+              "count": 3,
+              "highlighted": "Fall 2024",
+              "value": "Fall 2024"
+            },
+            {
+              "count": 3,
+              "highlighted": "Summer 2023",
+              "value": "Summer 2023"
+            },
+            {
+              "count": 2,
+              "highlighted": "Fall 2021",
+              "value": "Fall 2021"
+            },
+            {
+              "count": 2,
+              "highlighted": "Winter 2021",
+              "value": "Winter 2021"
+            },
+            {
+              "count": 2,
+              "highlighted": "Summer 2022",
+              "value": "Summer 2022"
+            },
+            {
+              "count": 2,
+              "highlighted": "Summer 2021",
+              "value": "Summer 2021"
+            },
+            {
+              "count": 2,
+              "highlighted": "Spring 2021",
+              "value": "Spring 2021"
+            },
+            {
+              "count": 1,
+              "highlighted": "Fall 2023",
+              "value": "Fall 2023"
+            },
+            {
+              "count": 1,
+              "highlighted": "Fall 2022",
+              "value": "Fall 2022"
+            },
+            {
+              "count": 1,
+              "highlighted": "Winter 2030",
+              "value": "Winter 2030"
+            },
+            {
+              "count": 1,
+              "highlighted": "Winter 2029",
+              "value": "Winter 2029"
+            },
+            {
+              "count": 1,
+              "highlighted": "Winter 2023",
+              "value": "Winter 2023"
+            },
+            {
+              "count": 1,
+              "highlighted": "Summer 2030",
+              "value": "Summer 2030"
+            },
+            {
+              "count": 1,
+              "highlighted": "Summer 2018",
+              "value": "Summer 2018"
+            },
+            {
+              "count": 1,
+              "highlighted": "Spring 2030",
+              "value": "Spring 2030"
+            },
+            {
+              "count": 1,
+              "highlighted": "Spring 2029",
+              "value": "Spring 2029"
+            },
+            {
+              "count": 1,
+              "highlighted": "Spring 2023",
+              "value": "Spring 2023"
+            }
+          ],
+          "field_name": "seasons",
+          "sampled": false,
+          "stats": {
+            "total_values": 37
+          }
+        }
+      ],
+      "found": 689765,
+      "hits": [
+        {
+          "document": {
+            "company_id": "95e851e3-2a04-479e-a81f-434250e24c2c",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/95e851e3-2a04-479e-a81f-434250e24c2c/logo.jpg",
+            "company_name": "Regeneron Pharmaceuticals",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Expert or higher"
+            ],
+            "functions": [
+              "Medical, Clinical & Veterinary",
+              "Healthcare Administration & Support"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 719120000.0,
+            "id": "fffaa0a8-9f4c-4872-8fe2-e45bec224c0a",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Cambridge, MA, USA",
+              "Westchester County, NY, USA",
+              "Middlesex, NJ, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 341600.0,
+            "min_salary": 205000.0,
+            "posting_id": "fffaa0a8-9f4c-4872-8fe2-e45bec224c0a",
+            "promoted_rank": 0,
+            "salary_period": 4,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 815757,
+            "start_date": 1780739618,
+            "title": "Director of Program Operations Leader - Ophthalmology/Renal",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000327,
+            "year_founded": 1988
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "75d0977a-03f0-4ddf-9d01-663afb4ba94e",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/75d0977a-03f0-4ddf-9d01-663afb4ba94e/logo.png",
+            "company_name": "Workday",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior"
+            ],
+            "functions": [
+              "Backend Engineering",
+              "Software Engineering"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 2852300000.0,
+            "id": "ffe8c4a7-d59c-4c29-b6d5-d44fdbd7ad9a",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Reston, VA, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 222000.0,
+            "min_salary": 123900.0,
+            "posting_id": "ffe8c4a7-d59c-4c29-b6d5-d44fdbd7ad9a",
+            "promoted_rank": 0,
+            "salary_period": 4,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 645570,
+            "sponsors_h1b": false,
+            "start_date": 1780741667,
+            "title": "Software Development Engineer",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000101,
+            "year_founded": 2005
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "6b1fdf04-c083-4578-a49f-083925d55524",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/6b1fdf04-c083-4578-a49f-083925d55524/logo.png",
+            "company_name": "Accenture",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior"
+            ],
+            "functions": [
+              "Frontend Engineering",
+              "Software Engineering"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 649587272.7272726,
+            "id": "ffe74fc1-446a-47e7-99eb-e7dd7d53aeae",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Bengaluru, Karnataka, India"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "posting_id": "ffe74fc1-446a-47e7-99eb-e7dd7d53aeae",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 805616,
+            "start_date": 1780565144,
+            "title": "Custom Software Engineering Lead",
+            "travel_requirements": "In Person",
+            "type": "Full-Time",
+            "updated_date": 1781000101,
+            "year_founded": 1989
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "c83c4a15-c7fa-4fd0-bbed-005308f4ab63",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/c83c4a15-c7fa-4fd0-bbed-005308f4ab63/logo.png",
+            "company_name": "IQVIA",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Clinical Research Operations",
+              "Biology & Biotech"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 12728610000.0,
+            "id": "ffc76c13-b09e-44fc-8da6-c14d8b7d2c2c",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Milan, Metropolitan City of Milan, Italy",
+              "Italy"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "posting_id": "ffc76c13-b09e-44fc-8da6-c14d8b7d2c2c",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 556485,
+            "sponsors_h1b": true,
+            "start_date": 1780741174,
+            "title": "Clinical Research Associate - Sponsor Dedicated",
+            "travel_requirements": "In Person",
+            "type": "Full-Time",
+            "updated_date": 1781000329,
+            "year_founded": 1998
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "8cbd871d-4e1b-4472-a51d-63dde4a7094d",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/8cbd871d-4e1b-4472-a51d-63dde4a7094d/logo.jpg",
+            "company_name": "MultiCare Health System",
+            "company_size": "5,001-10,000",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior"
+            ],
+            "functions": [
+              "Medical, Clinical & Veterinary",
+              "Nursing & Allied Health Professionals"
+            ],
+            "id": "ff9ebb69-2400-4b20-ac54-e3a73ee2e03f",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Olympia, WA, USA"
+            ],
+            "majors": [
+              "Psychology"
+            ],
+            "max_salary": 30.4,
+            "min_salary": 30.4,
+            "posting_id": "ff9ebb69-2400-4b20-ac54-e3a73ee2e03f",
+            "promoted_rank": 0,
+            "salary_period": 1,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 584247,
+            "start_date": 1780742174,
+            "title": "Mental Health Professional - PACT Outreach",
+            "travel_requirements": "In Person",
+            "type": "Full-Time",
+            "updated_date": 1781000101,
+            "year_founded": 1882
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "22264a58-0c05-498f-82ed-c43bf5750012",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/22264a58-0c05-498f-82ed-c43bf5750012/logo.png",
+            "company_name": "Avnet",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior",
+              "Expert or higher"
+            ],
+            "functions": [
+              "Server Administration",
+              "DevOps & Infrastructure"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 550000000.0,
+            "id": "ff40f55b-2f7f-4053-bcc1-4d794998eec8",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Munich, Germany"
+            ],
+            "majors": [
+              "Computer Science"
+            ],
+            "posting_id": "ff40f55b-2f7f-4053-bcc1-4d794998eec8",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 35676,
+            "start_date": 1781000085,
+            "title": "Senior SAP Basis Consultant",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000184,
+            "year_founded": 1921
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "45b14ed8-b4fe-47c7-bd78-53fedbc639ad",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/45b14ed8-b4fe-47c7-bd78-53fedbc639ad/logo.png",
+            "company_name": "VillageMD",
+            "company_size": "1,001-5,000",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Diagnostics & Laboratory Professionals",
+              "Medical, Clinical & Veterinary"
+            ],
+            "funding_stage": "Late VC",
+            "funding_total": 491000000.0,
+            "id": "ff0c676e-faae-4027-ba57-36a7669e302b",
+            "is_scout_job_posting": false,
+            "locations": [
+              "New Britain, CT, USA"
+            ],
+            "majors": [],
+            "posting_id": "ff0c676e-faae-4027-ba57-36a7669e302b",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 259510,
+            "start_date": 1780742609,
+            "title": "Per Diem CT Technologist",
+            "travel_requirements": "In Person",
+            "type": "Part-Time",
+            "updated_date": 1781000101,
+            "year_founded": 2013
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "64efc3b7-d8c5-4b7d-bf29-7438a77d21d1",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/64efc3b7-d8c5-4b7d-bf29-7438a77d21d1/logo.png",
+            "company_name": "BJ's Wholesale Club",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Clerical & Data Entry",
+              "Clerk"
+            ],
+            "funding_stage": "IPO",
+            "id": "fefe7c2b-0823-402f-a6f1-7228bf7568ea",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Wappingers Falls, NY, USA"
+            ],
+            "majors": [],
+            "max_salary": 21.0,
+            "min_salary": 17.5,
+            "posting_id": "fefe7c2b-0823-402f-a6f1-7228bf7568ea",
+            "promoted_rank": 0,
+            "salary_period": 1,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 568641,
+            "start_date": 1780742217,
+            "title": "Overnight Meat Clerk",
+            "travel_requirements": "In Person",
+            "type": "Part-Time",
+            "updated_date": 1781000316,
+            "year_founded": 1984
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "868a4ad4-acd1-4ed1-8ed0-0ee984e51c55",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/868a4ad4-acd1-4ed1-8ed0-0ee984e51c55/logo.jpg",
+            "company_name": "Ivy Tech Community College",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Administrative Support",
+              "Administrative & Executive Assistance"
+            ],
+            "id": "fefabc71-b40c-4087-bf9f-2cd789cd7872",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Valparaiso, IN, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 15.0,
+            "min_salary": 15.0,
+            "posting_id": "fefabc71-b40c-4087-bf9f-2cd789cd7872",
+            "promoted_rank": 0,
+            "salary_period": 1,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 445411,
+            "start_date": 1780739401,
+            "title": "Part Time Exam Proctor",
+            "travel_requirements": "In Person",
+            "type": "Part-Time",
+            "updated_date": 1781000281
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "eb3f206c-0567-46e0-90a5-d3ea32fa2aa2",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/eb3f206c-0567-46e0-90a5-d3ea32fa2aa2/logo.png",
+            "company_name": "Ameriprise Financial",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "end_date": 1782691200,
+            "experience_level": [
+              "Entry Level/New Grad"
+            ],
+            "functions": [
+              "Customer Experience & Support",
+              "Customer Support"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 287265818.1818182,
+            "id": "feea90d0-7748-43af-ae75-c2bdec1f9754",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Charlotte, NC, USA"
+            ],
+            "majors": [],
+            "posting_id": "feea90d0-7748-43af-ae75-c2bdec1f9754",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 737695,
+            "sponsors_h1b": false,
+            "start_date": 1780743263,
+            "title": "Customer Professional 2",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000483,
+            "year_founded": 1894
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        }
+      ],
+      "out_of": 689765,
+      "page": 1,
+      "request_params": {
+        "collection_name": "jobs_v17",
+        "first_q": "",
+        "per_page": 10,
+        "q": ""
+      },
+      "search_cutoff": false,
+      "search_time_ms": 46
+    }
+  },
+  {
+    "url": "https://js-ha.simplify.jobs/collections/jobs/documents/search?q=&query_by=title&per_page=1&use_cache=true&x-typesense-api-key=SWF1ODFZbzBkcVlVdnVwT2FqUE5EZ3JpSk5hVmdpUHg1SklXWEdGbHZVRT1POHJieyJleGNsdWRlX2ZpZWxkcyI6ImNvbXBhbnlfdXJsLGNhdGVnb3JpZXMsYWRkaXRpb25hbF9yZXF1aXJlbWVudHMsY291bnRyaWVzLGRlZ3JlZXMsZ2VvbG9jYXRpb25zLGluZHVzdHJpZXMsaXNfc2ltcGxlX2FwcGxpY2F0aW9uLGpvYl9saXN0cyxsZWFkZXJzaGlwX3R5cGUsc2VjdXJpdHlfY2xlYXJhbmNlLHNraWxscyx1cmwifQ%3D%3D",
+    "data": {
+      "facet_counts": [],
+      "found": 689765,
+      "hits": [
+        {
+          "document": {
+            "company_id": "95e851e3-2a04-479e-a81f-434250e24c2c",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/95e851e3-2a04-479e-a81f-434250e24c2c/logo.jpg",
+            "company_name": "Regeneron Pharmaceuticals",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Expert or higher"
+            ],
+            "functions": [
+              "Medical, Clinical & Veterinary",
+              "Healthcare Administration & Support"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 719120000.0,
+            "id": "fffaa0a8-9f4c-4872-8fe2-e45bec224c0a",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Cambridge, MA, USA",
+              "Westchester County, NY, USA",
+              "Middlesex, NJ, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 341600.0,
+            "min_salary": 205000.0,
+            "posting_id": "fffaa0a8-9f4c-4872-8fe2-e45bec224c0a",
+            "promoted_rank": 0,
+            "salary_period": 4,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 815757,
+            "start_date": 1780739618,
+            "title": "Director of Program Operations Leader - Ophthalmology/Renal",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000327,
+            "year_founded": 1988
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        }
+      ],
+      "out_of": 689765,
+      "page": 1,
+      "request_params": {
+        "collection_name": "jobs_v17",
+        "first_q": "",
+        "per_page": 1,
+        "q": ""
+      },
+      "search_cutoff": false,
+      "search_time_ms": 89
+    }
+  },
+  {
+    "url": "https://js-ha.simplify.jobs/collections/jobs/documents/search?q=&query_by=degrees&facet_by=degrees&max_facet_values=1000&use_cache=true&x-typesense-api-key=SWF1ODFZbzBkcVlVdnVwT2FqUE5EZ3JpSk5hVmdpUHg1SklXWEdGbHZVRT1POHJieyJleGNsdWRlX2ZpZWxkcyI6ImNvbXBhbnlfdXJsLGNhdGVnb3JpZXMsYWRkaXRpb25hbF9yZXF1aXJlbWVudHMsY291bnRyaWVzLGRlZ3JlZXMsZ2VvbG9jYXRpb25zLGluZHVzdHJpZXMsaXNfc2ltcGxlX2FwcGxpY2F0aW9uLGpvYl9saXN0cyxsZWFkZXJzaGlwX3R5cGUsc2VjdXJpdHlfY2xlYXJhbmNlLHNraWxscyx1cmwifQ%3D%3D",
+    "data": {
+      "facet_counts": [
+        {
+          "counts": [
+            {
+              "count": 316190,
+              "highlighted": "Bachelor's",
+              "value": "Bachelor's"
+            },
+            {
+              "count": 86909,
+              "highlighted": "Master's",
+              "value": "Master's"
+            },
+            {
+              "count": 32173,
+              "highlighted": "PhD",
+              "value": "PhD"
+            },
+            {
+              "count": 31623,
+              "highlighted": "Associate's",
+              "value": "Associate's"
+            },
+            {
+              "count": 17274,
+              "highlighted": "MBA",
+              "value": "MBA"
+            },
+            {
+              "count": 11513,
+              "highlighted": "Certificate",
+              "value": "Certificate"
+            },
+            {
+              "count": 5911,
+              "highlighted": "MD",
+              "value": "MD"
+            },
+            {
+              "count": 5014,
+              "highlighted": "JD",
+              "value": "JD"
+            },
+            {
+              "count": 3622,
+              "highlighted": "PharmD",
+              "value": "PharmD"
+            },
+            {
+              "count": 586,
+              "highlighted": "DVM",
+              "value": "DVM"
+            },
+            {
+              "count": 408,
+              "highlighted": "DO",
+              "value": "DO"
+            },
+            {
+              "count": 168,
+              "highlighted": "Bootcamp",
+              "value": "Bootcamp"
+            },
+            {
+              "count": 79,
+              "highlighted": "DDS",
+              "value": "DDS"
+            },
+            {
+              "count": 42,
+              "highlighted": "Incomplete",
+              "value": "Incomplete"
+            }
+          ],
+          "field_name": "degrees",
+          "sampled": false,
+          "stats": {
+            "total_values": 14
+          }
+        }
+      ],
+      "found": 689765,
+      "hits": [
+        {
+          "document": {
+            "company_id": "95e851e3-2a04-479e-a81f-434250e24c2c",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/95e851e3-2a04-479e-a81f-434250e24c2c/logo.jpg",
+            "company_name": "Regeneron Pharmaceuticals",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Expert or higher"
+            ],
+            "functions": [
+              "Medical, Clinical & Veterinary",
+              "Healthcare Administration & Support"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 719120000.0,
+            "id": "fffaa0a8-9f4c-4872-8fe2-e45bec224c0a",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Cambridge, MA, USA",
+              "Westchester County, NY, USA",
+              "Middlesex, NJ, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 341600.0,
+            "min_salary": 205000.0,
+            "posting_id": "fffaa0a8-9f4c-4872-8fe2-e45bec224c0a",
+            "promoted_rank": 0,
+            "salary_period": 4,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 815757,
+            "start_date": 1780739618,
+            "title": "Director of Program Operations Leader - Ophthalmology/Renal",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000327,
+            "year_founded": 1988
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "75d0977a-03f0-4ddf-9d01-663afb4ba94e",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/75d0977a-03f0-4ddf-9d01-663afb4ba94e/logo.png",
+            "company_name": "Workday",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior"
+            ],
+            "functions": [
+              "Backend Engineering",
+              "Software Engineering"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 2852300000.0,
+            "id": "ffe8c4a7-d59c-4c29-b6d5-d44fdbd7ad9a",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Reston, VA, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 222000.0,
+            "min_salary": 123900.0,
+            "posting_id": "ffe8c4a7-d59c-4c29-b6d5-d44fdbd7ad9a",
+            "promoted_rank": 0,
+            "salary_period": 4,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 645570,
+            "sponsors_h1b": false,
+            "start_date": 1780741667,
+            "title": "Software Development Engineer",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000101,
+            "year_founded": 2005
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "6b1fdf04-c083-4578-a49f-083925d55524",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/6b1fdf04-c083-4578-a49f-083925d55524/logo.png",
+            "company_name": "Accenture",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior"
+            ],
+            "functions": [
+              "Frontend Engineering",
+              "Software Engineering"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 649587272.7272726,
+            "id": "ffe74fc1-446a-47e7-99eb-e7dd7d53aeae",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Bengaluru, Karnataka, India"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "posting_id": "ffe74fc1-446a-47e7-99eb-e7dd7d53aeae",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 805616,
+            "start_date": 1780565144,
+            "title": "Custom Software Engineering Lead",
+            "travel_requirements": "In Person",
+            "type": "Full-Time",
+            "updated_date": 1781000101,
+            "year_founded": 1989
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "c83c4a15-c7fa-4fd0-bbed-005308f4ab63",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/c83c4a15-c7fa-4fd0-bbed-005308f4ab63/logo.png",
+            "company_name": "IQVIA",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Clinical Research Operations",
+              "Biology & Biotech"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 12728610000.0,
+            "id": "ffc76c13-b09e-44fc-8da6-c14d8b7d2c2c",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Milan, Metropolitan City of Milan, Italy",
+              "Italy"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "posting_id": "ffc76c13-b09e-44fc-8da6-c14d8b7d2c2c",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 556485,
+            "sponsors_h1b": true,
+            "start_date": 1780741174,
+            "title": "Clinical Research Associate - Sponsor Dedicated",
+            "travel_requirements": "In Person",
+            "type": "Full-Time",
+            "updated_date": 1781000329,
+            "year_founded": 1998
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "8cbd871d-4e1b-4472-a51d-63dde4a7094d",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/8cbd871d-4e1b-4472-a51d-63dde4a7094d/logo.jpg",
+            "company_name": "MultiCare Health System",
+            "company_size": "5,001-10,000",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior"
+            ],
+            "functions": [
+              "Medical, Clinical & Veterinary",
+              "Nursing & Allied Health Professionals"
+            ],
+            "id": "ff9ebb69-2400-4b20-ac54-e3a73ee2e03f",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Olympia, WA, USA"
+            ],
+            "majors": [
+              "Psychology"
+            ],
+            "max_salary": 30.4,
+            "min_salary": 30.4,
+            "posting_id": "ff9ebb69-2400-4b20-ac54-e3a73ee2e03f",
+            "promoted_rank": 0,
+            "salary_period": 1,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 584247,
+            "start_date": 1780742174,
+            "title": "Mental Health Professional - PACT Outreach",
+            "travel_requirements": "In Person",
+            "type": "Full-Time",
+            "updated_date": 1781000101,
+            "year_founded": 1882
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "22264a58-0c05-498f-82ed-c43bf5750012",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/22264a58-0c05-498f-82ed-c43bf5750012/logo.png",
+            "company_name": "Avnet",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Senior",
+              "Expert or higher"
+            ],
+            "functions": [
+              "Server Administration",
+              "DevOps & Infrastructure"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 550000000.0,
+            "id": "ff40f55b-2f7f-4053-bcc1-4d794998eec8",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Munich, Germany"
+            ],
+            "majors": [
+              "Computer Science"
+            ],
+            "posting_id": "ff40f55b-2f7f-4053-bcc1-4d794998eec8",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 35676,
+            "start_date": 1781000085,
+            "title": "Senior SAP Basis Consultant",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000184,
+            "year_founded": 1921
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "45b14ed8-b4fe-47c7-bd78-53fedbc639ad",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/45b14ed8-b4fe-47c7-bd78-53fedbc639ad/logo.png",
+            "company_name": "VillageMD",
+            "company_size": "1,001-5,000",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Diagnostics & Laboratory Professionals",
+              "Medical, Clinical & Veterinary"
+            ],
+            "funding_stage": "Late VC",
+            "funding_total": 491000000.0,
+            "id": "ff0c676e-faae-4027-ba57-36a7669e302b",
+            "is_scout_job_posting": false,
+            "locations": [
+              "New Britain, CT, USA"
+            ],
+            "majors": [],
+            "posting_id": "ff0c676e-faae-4027-ba57-36a7669e302b",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 259510,
+            "start_date": 1780742609,
+            "title": "Per Diem CT Technologist",
+            "travel_requirements": "In Person",
+            "type": "Part-Time",
+            "updated_date": 1781000101,
+            "year_founded": 2013
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "64efc3b7-d8c5-4b7d-bf29-7438a77d21d1",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/64efc3b7-d8c5-4b7d-bf29-7438a77d21d1/logo.png",
+            "company_name": "BJ's Wholesale Club",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Clerical & Data Entry",
+              "Clerk"
+            ],
+            "funding_stage": "IPO",
+            "id": "fefe7c2b-0823-402f-a6f1-7228bf7568ea",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Wappingers Falls, NY, USA"
+            ],
+            "majors": [],
+            "max_salary": 21.0,
+            "min_salary": 17.5,
+            "posting_id": "fefe7c2b-0823-402f-a6f1-7228bf7568ea",
+            "promoted_rank": 0,
+            "salary_period": 1,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 568641,
+            "start_date": 1780742217,
+            "title": "Overnight Meat Clerk",
+            "travel_requirements": "In Person",
+            "type": "Part-Time",
+            "updated_date": 1781000316,
+            "year_founded": 1984
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "868a4ad4-acd1-4ed1-8ed0-0ee984e51c55",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/868a4ad4-acd1-4ed1-8ed0-0ee984e51c55/logo.jpg",
+            "company_name": "Ivy Tech Community College",
+            "currency_type": "USD",
+            "experience_level": [
+              "Mid Level"
+            ],
+            "functions": [
+              "Administrative Support",
+              "Administrative & Executive Assistance"
+            ],
+            "id": "fefabc71-b40c-4087-bf9f-2cd789cd7872",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Valparaiso, IN, USA"
+            ],
+            "majors": [
+              "Other/Not Listed"
+            ],
+            "max_salary": 15.0,
+            "min_salary": 15.0,
+            "posting_id": "fefabc71-b40c-4087-bf9f-2cd789cd7872",
+            "promoted_rank": 0,
+            "salary_period": 1,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 445411,
+            "start_date": 1780739401,
+            "title": "Part Time Exam Proctor",
+            "travel_requirements": "In Person",
+            "type": "Part-Time",
+            "updated_date": 1781000281
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        },
+        {
+          "document": {
+            "company_id": "eb3f206c-0567-46e0-90a5-d3ea32fa2aa2",
+            "company_logo": "https://storage.googleapis.com/simplify-imgs/companies/eb3f206c-0567-46e0-90a5-d3ea32fa2aa2/logo.png",
+            "company_name": "Ameriprise Financial",
+            "company_size": "10,001+",
+            "currency_type": "USD",
+            "end_date": 1782691200,
+            "experience_level": [
+              "Entry Level/New Grad"
+            ],
+            "functions": [
+              "Customer Experience & Support",
+              "Customer Support"
+            ],
+            "funding_stage": "IPO",
+            "funding_total": 287265818.1818182,
+            "id": "feea90d0-7748-43af-ae75-c2bdec1f9754",
+            "is_scout_job_posting": false,
+            "locations": [
+              "Charlotte, NC, USA"
+            ],
+            "majors": [],
+            "posting_id": "feea90d0-7748-43af-ae75-c2bdec1f9754",
+            "promoted_rank": 0,
+            "seasons": [
+              "N/A"
+            ],
+            "shuffle_key": 737695,
+            "sponsors_h1b": false,
+            "start_date": 1780743263,
+            "title": "Customer Professional 2",
+            "travel_requirements": "Hybrid",
+            "type": "Full-Time",
+            "updated_date": 1781000483,
+            "year_founded": 1894
+          },
+          "highlight": {},
+          "highlights": [],
+          "text_match": 100,
+          "text_match_info": {
+            "best_field_score": "0",
+            "best_field_weight": 12,
+            "fields_matched": 4,
+            "num_tokens_dropped": 1,
+            "score": "100",
+            "tokens_matched": 0,
+            "typo_prefix_score": 255
+          }
+        }
+      ],
+      "out_of": 689765,
+      "page": 1,
+      "request_params": {
+        "collection_name": "jobs_v17",
+        "first_q": "",
+        "per_page": 10,
+        "q": ""
+      },
+      "search_cutoff": false,
+      "search_time_ms": 157
+    }
+  }
+]

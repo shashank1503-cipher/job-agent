@@ -1,0 +1,107 @@
+preferences:
+  roles:
+    - "Software Engineer II"
+    - "Senior Software Engineer"
+    - "Backend Engineer"
+    - "Software Development Engineer II"
+    - "SDE II"
+    - "Backend Developer"
+    - "Full Stack Engineer"
+
+  locations:
+    - "Remote"
+    - "Bangalore"
+    - "Delhi NCR"
+
+  current_salary_lpa: 25
+  expected_salary_lpa: 30
+  min_salary_lpa: 28
+  max_salary_lpa: 40
+
+  industries:
+    - "Cybersecurity"
+    - "AI/ML"
+    - "Developer Tools"
+    - "FinTech"
+    - "SaaS"
+    - "HealthTech"
+
+  exclude_companies:
+    - "Infosys"
+    - "Wipro"
+    - "TCS"
+    - "Cognizant"
+    - "Accenture"
+    - "HCL"
+    - "Tech Mahindra"
+
+  keywords_must_have:
+    - "Python"
+    - "Backend"
+    - "REST API"
+
+  keywords_nice_to_have:
+    - "Go"
+    - "Golang"
+    - "FastAPI"
+    - "Django"
+    - "Microservices"
+    - "Docker"
+    - "Kubernetes"
+    - "AWS"
+    - "Elasticsearch"
+    - "React"
+
+  keywords_exclude:
+    - "PHP"
+    - "Ruby"
+    - ".NET"
+    - "SAP"
+    - "Mainframe"
+    - "Embedded Systems"
+
+  experience_level:
+    - "mid"
+    - "senior"
+    - "SDE II"
+    - "SDE III"
+
+  employment_type:
+    - "full-time"
+
+  search:
+    sites:
+      - linkedin
+      - indeed
+    results_per_role: 200
+    hours_old: 72
+    country: "India"
+    greenhouse_enabled: true
+    lever_enabled: true
+
+  experience_years:
+    min: 1
+    max: 4
+
+  resume_variants:
+    - path: "data/resumes/resume_backend_python.pdf"
+      label: "Backend Python"
+      tags: ["Python", "Backend", "FastAPI", "Django", "REST API", "Microservices", "PostgreSQL", "Redis"]
+    - path: "data/resumes/resume_fullstack.pdf"
+      label: "Full Stack"
+      tags: ["Python", "React", "TypeScript", "Full Stack", "Frontend", "REST API", "Node.js"]
+
+  max_applications_per_day: 15
+  min_match_score: 70
+
+  personal_info:
+    name: "Shashank Srivastava"
+    email: "shashank.srivastava25sks@gmail.com"
+    phone: "+91-9793422020"
+    linkedin: "linkedin.com/in/shashank-srivastava1503/"
+    github: "github.com/shashank1503-cipher"
+    current_company: "Cyware Labs Pvt. Ltd."
+    current_location: "Bangalore"
+    notice_period_days: 60
+    open_to_relocation: true
+
