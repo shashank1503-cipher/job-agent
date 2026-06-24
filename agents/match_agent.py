@@ -49,6 +49,22 @@ def _score_job(job: dict, prefs: dict) -> dict:
                 "strengths": [],
             }
 
+    # ── Remote location filter ─────────────────────────────────────────────
+    # If remote_locations is set, remote jobs that specify a non-matching
+    # country/region are hard-rejected. Plain "Remote" with no country passes.
+    remote_locations = prefs.get("remote_locations", [])
+    if remote_locations and "remote" in loc_norm:
+        loc_without_remote = loc_norm.replace("remote", "").strip(" ,·-–")
+        if loc_without_remote:  # there's a country/region specified
+            allowed = [_norm(r) for r in remote_locations]
+            if not any(r in loc_norm for r in allowed):
+                return {
+                    "score": 0,
+                    "reasons": [f"Remote job outside allowed region: {location}"],
+                    "missing_keywords": [],
+                    "strengths": [],
+                }
+
     # ── Title match (0–35) ────────────────────────────────────────────────
     title_score = 0
     for role in prefs.get("roles", []):

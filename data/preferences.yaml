@@ -13,6 +13,12 @@ preferences:
     - "Bangalore"
     - "Delhi NCR"
 
+  # Remote jobs are only accepted if the listed country/region appears in the location.
+  # Jobs listed as plain "Remote" with no country are allowed through.
+  remote_locations:
+    - "India"
+    - "IN"
+
   current_salary_lpa: 25
   expected_salary_lpa: 30
   min_salary_lpa: 28
