@@ -24,6 +24,7 @@ def main():
     with http.server.HTTPServer(("127.0.0.1", PORT), handler) as httpd:
         url = f"http://localhost:{PORT}/apply_list.html"
         print(f"Serving at {url}  (Ctrl+C to stop)")
+        print(f"          → http://localhost:{PORT}/rejected_jobs.html")
         webbrowser.open(url)
         try:
             httpd.serve_forever()

@@ -91,7 +91,9 @@ def run(prefs_path: str, refresh: bool = False, mock: bool = False):
     match_agent = MatchAgent(prefs)
     qualifying = match_agent.run(all_jobs)
 
-    rejected_count = len(all_jobs) - len(qualifying)
+    qualifying_urls = {j.get("url") for j in qualifying}
+    rejected = [j for j in all_jobs if j.get("url") not in qualifying_urls]
+    rejected_count = len(rejected)
 
     source_counts: dict[str, int] = {}
     for job in all_jobs:
@@ -109,10 +111,11 @@ def run(prefs_path: str, refresh: bool = False, mock: bool = False):
     console.rule("[bold]Step 3 · Output[/bold]")
     _write_apply_list(qualifying)
     _write_html_report(qualifying, len(all_jobs))
-    _write_rejected(all_jobs, qualifying)
+    _write_rejected(rejected)
+    _write_rejected_html(rejected, len(all_jobs))
 
     console.print(f"[bold green]→ output/apply_list.html[/bold green]  (open in browser, click Apply)")
-    console.print(f"[dim]→ output/apply_list.csv  ·  output/rejected_jobs.csv[/dim]")
+    console.print(f"[dim]→ output/rejected_jobs.html  ·  output/apply_list.csv  ·  output/rejected_jobs.csv[/dim]")
 
 
 def _write_apply_list(jobs: list):
@@ -260,9 +263,7 @@ main {{ max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }}
         f.write(html)
 
 
-def _write_rejected(all_jobs: list, qualifying: list):
-    qualifying_urls = {j.get("url") for j in qualifying}
-    rejected = [j for j in all_jobs if j.get("url") not in qualifying_urls]
+def _write_rejected(rejected: list):
     path = "output/rejected_jobs.csv"
     fields = ["score", "title", "company", "location", "url", "source", "reasons"]
     with open(path, "w", newline="", encoding="utf-8") as f:
@@ -279,6 +280,117 @@ def _write_rejected(all_jobs: list, qualifying: list):
                 "source": job.get("source", ""),
                 "reasons": "; ".join(analysis.get("reasons", [])),
             })
+
+
+def _write_rejected_html(rejected: list, total_scraped: int):
+    today = date.today().strftime("%d %b %Y")
+    e = html_lib.escape
+
+    cards = []
+    for i, job in enumerate(rejected, 1):
+        analysis = job.get("match_analysis", {})
+        score = analysis.get("score", 0)
+        score_cls = "s-high" if score >= 80 else ("s-mid" if score >= 60 else "s-low")
+
+        strengths = analysis.get("strengths", [])
+        missing = analysis.get("missing_keywords", [])
+        reasons = "; ".join(analysis.get("reasons", []))
+        meta_parts = [p for p in [job.get("location", ""), job.get("source", ""), job.get("date_posted", "")] if p]
+
+        chips = "".join(f'<span class="chip cm">{e(s)}</span>' for s in strengths)
+        chips += "".join(f'<span class="chip cx">{e(m)}</span>' for m in missing)
+
+        cards.append(f"""
+  <article class="card">
+    <span class="rank">#{i}</span>
+    <span class="score {score_cls}">{score}</span>
+    <div class="body">
+      <div class="title-row">
+        <span class="title">{e(job.get('title', ''))}</span>
+        <span class="company">{e(job.get('company', ''))}</span>
+      </div>
+      <div class="meta">{e(' · '.join(meta_parts))}</div>
+      {f'<div class="reason">{e(reasons)}</div>' if reasons else ''}
+      {f'<div class="chips">{chips}</div>' if chips else ''}
+    </div>
+  </article>""")
+
+    body = "\n".join(cards) if cards else '<p class="empty">No rejected jobs.</p>'
+
+    html = f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rejected Jobs · {today}</title>
+<style>
+*, *::before, *::after {{ box-sizing: border-box; margin: 0; padding: 0; }}
+:root {{
+  --bg:      #f5f4f1;
+  --surface: #ffffff;
+  --border:  #e3e1db;
+  --text:    #18181a;
+  --muted:   #77756e;
+  --s-high-bg:  #d4f4e2; --s-high-tx: #165c35;
+  --s-mid-bg:   #fef0cc; --s-mid-tx:  #7a4e00;
+  --s-low-bg:   #fde0e0; --s-low-tx:  #8a1f1f;
+  --cm-bg:   #e8f0fe; --cm-tx: #1a4ab8;
+  --cx-bg:   #f3f3f3; --cx-tx: #888;
+  --reason-tx: #a0302a;
+  font-size: 15px;
+}}
+body {{ background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; line-height: 1.5; }}
+header {{ max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 1.5rem; border-bottom: 1px solid var(--border); }}
+header h1 {{ font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em; }}
+.sub {{ font-size: 0.8rem; color: var(--muted); margin-top: .2rem; }}
+main {{ max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }}
+.card {{
+  display: grid;
+  grid-template-columns: 2.2rem 3rem 1fr;
+  gap: .75rem 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}}
+.card:first-child {{ padding-top: 1.25rem; }}
+.rank {{ font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; padding-top: .1rem; }}
+.score {{
+  font-size: .95rem; font-weight: 700; font-variant-numeric: tabular-nums;
+  text-align: center; padding: .2rem .3rem; border-radius: 4px;
+  line-height: 1.4;
+}}
+.s-high {{ background: var(--s-high-bg); color: var(--s-high-tx); }}
+.s-mid  {{ background: var(--s-mid-bg);  color: var(--s-mid-tx);  }}
+.s-low  {{ background: var(--s-low-bg);  color: var(--s-low-tx);  }}
+.body {{ min-width: 0; }}
+.title-row {{ display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }}
+.title {{ font-weight: 600; font-size: .95rem; }}
+.company {{ color: var(--muted); font-size: .85rem; }}
+.meta {{ font-size: .78rem; color: var(--muted); margin-top: .18rem; }}
+.reason {{ font-size: .78rem; color: var(--reason-tx); margin-top: .18rem; }}
+.chips {{ display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .4rem; }}
+.chip {{ font-size: .7rem; padding: .15rem .45rem; border-radius: 3px; white-space: nowrap; }}
+.cm {{ background: var(--cm-bg); color: var(--cm-tx); }}
+.cx {{ background: var(--cx-bg); color: var(--cx-tx); text-decoration: line-through; }}
+.empty {{ padding: 3rem 0; text-align: center; color: var(--muted); }}
+@media (max-width: 600px) {{
+  .card {{ grid-template-columns: 2rem 2.8rem 1fr; }}
+}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Rejected Jobs</h1>
+  <p class="sub">{today} &nbsp;·&nbsp; {len(rejected)} rejected &nbsp;·&nbsp; {total_scraped} scraped</p>
+</header>
+<main>
+{body}
+</main>
+</body>
+</html>"""
+
+    with open("output/rejected_jobs.html", "w", encoding="utf-8") as f:
+        f.write(html)
 
 
 def main():
