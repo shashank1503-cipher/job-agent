@@ -56,9 +56,14 @@ def _score_job(job: dict, prefs: dict) -> dict:
     if remote_locations and "remote" in loc_norm:
         loc_without_remote = loc_norm.replace("remote", "").strip()
         if loc_without_remote:  # there's a country/region specified
-            allowed = [_norm(r) for r in remote_locations]
             loc_words = set(loc_without_remote.split())
-            if not any(r in loc_words for r in allowed):
+            def _region_match(region):
+                # Short codes (≤3 chars, e.g. "IN"): case-sensitive word-boundary
+                # match on the original string so "IN" ≠ preposition "in".
+                if len(region) <= 3:
+                    return bool(re.search(r'\b' + re.escape(region) + r'\b', location))
+                return _norm(region) in loc_words
+            if not any(_region_match(r) for r in remote_locations):
                 return {
                     "score": 0,
                     "reasons": [f"Remote job outside allowed region: {location}"],
