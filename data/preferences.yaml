@@ -45,18 +45,24 @@ preferences:
     - "Python"
     - "Backend"
     - "REST API"
+    - "Postgres"
+    - "Django"
+    - "FastAPI"
+    - "Microservices"
 
   keywords_nice_to_have:
-    - "Go"
-    - "Golang"
-    - "FastAPI"
-    - "Django"
-    - "Microservices"
-    - "Docker"
-    - "Kubernetes"
-    - "AWS"
-    - "Elasticsearch"
-    - "React"
+    tier1:
+      - "Django"
+      - "FastAPI"
+      - "Elasticsearch"
+      - "Microservices"
+      - "Kubernetes"
+    tier2:
+      - "Go"
+      - "Golang"
+      - "React"
+      - "AWS"
+      - "Docker"
 
   keywords_exclude:
     - "PHP"
@@ -65,6 +71,52 @@ preferences:
     - "SAP"
     - "Mainframe"
     - "Embedded Systems"
+
+  industry_keywords:
+    Cybersecurity:
+      - "security"
+      - "threat"
+      - "SOC"
+      - "vulnerability"
+      - "SIEM"
+      - "pentest"
+      - "pen test"
+      - "cyware"
+    AI/ML:
+      - "machine learning"
+      - "LLM"
+      - "artificial intelligence"
+      - "data science"
+      - "MLOps"
+      - "generative AI"
+    Developer Tools:
+      - "developer platform"
+      - "devtools"
+      - "SDK"
+      - "developer experience"
+      - "DX"
+      - "CLI tool"
+    FinTech:
+      - "fintech"
+      - "payments"
+      - "banking"
+      - "financial services"
+      - "lending"
+      - "trading"
+      - "wallet"
+    SaaS:
+      - "SaaS"
+      - "multi-tenant"
+      - "subscription"
+      - "cloud platform"
+      - "B2B software"
+    HealthTech:
+      - "healthtech"
+      - "healthcare"
+      - "medical"
+      - "clinical"
+      - "EHR"
+      - "patient"
 
   experience_level:
     - "mid"

@@ -92,7 +92,11 @@ def run(prefs_path: str, refresh: bool = False, mock: bool = False):
     qualifying = match_agent.run(all_jobs)
 
     qualifying_urls = {j.get("url") for j in qualifying}
-    rejected = [j for j in all_jobs if j.get("url") not in qualifying_urls]
+    rejected = sorted(
+        (j for j in all_jobs if j.get("url") not in qualifying_urls),
+        key=lambda j: j.get("match_analysis", {}).get("score", 0),
+        reverse=True,
+    )
     rejected_count = len(rejected)
 
     source_counts: dict[str, int] = {}
