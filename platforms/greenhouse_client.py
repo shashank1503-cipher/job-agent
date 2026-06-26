@@ -4,6 +4,8 @@ import time
 import httpx
 from bs4 import BeautifulSoup
 
+from utils.text_utils import _clean
+
 logger = logging.getLogger(__name__)
 
 _BASE = "https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true"
@@ -24,7 +26,9 @@ def fetch_greenhouse_jobs(slugs: list[str], keywords: list[str]) -> list[dict]:
         try:
             resp = httpx.get(url, timeout=10, follow_redirects=True)
             if resp.status_code != 200:
-                logger.debug("Greenhouse %s → HTTP %d, skipping.", slug, resp.status_code)
+                logger.debug(
+                    "Greenhouse %s → HTTP %d, skipping.", slug, resp.status_code
+                )
                 time.sleep(_RATE_SLEEP)
                 continue
             data = resp.json()
@@ -41,7 +45,7 @@ def fetch_greenhouse_jobs(slugs: list[str], keywords: list[str]) -> list[dict]:
         for job in jobs:
             title = job.get("title", "") or ""
             content_html = job.get("content", "") or ""
-            content_text = BeautifulSoup(content_html, "html.parser").get_text()
+            content_text = _clean(BeautifulSoup(content_html, "html.parser").get_text())
 
             # Keyword filter
             combined = (title + " " + content_text).lower()
@@ -57,16 +61,20 @@ def fetch_greenhouse_jobs(slugs: list[str], keywords: list[str]) -> list[dict]:
                     break
 
             location_obj = job.get("location") or {}
-            results.append({
-                "title": title,
-                "company": company_name,
-                "location": location_obj.get("name", "") if isinstance(location_obj, dict) else "",
-                "description": content_text,
-                "url": job.get("absolute_url", "") or "",
-                "salary": "",
-                "date_posted": job.get("updated_at", "") or "",
-                "source": "greenhouse",
-            })
+            results.append(
+                {
+                    "title": title,
+                    "company": company_name,
+                    "location": location_obj.get("name", "")
+                    if isinstance(location_obj, dict)
+                    else "",
+                    "description": content_text,
+                    "url": job.get("absolute_url", "") or "",
+                    "salary": "",
+                    "date_posted": job.get("updated_at", "") or "",
+                    "source": "greenhouse",
+                }
+            )
 
         time.sleep(_RATE_SLEEP)
 

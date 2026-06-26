@@ -5,6 +5,9 @@ requires-python = ">=3.11"
 dependencies = [
     "docx2pdf>=0.1.8",
     "dotenv>=0.9.9",
+    "rank-bm25",
+    "sentence-transformers",
+    "fastapi>=0.115.0",
     "httpx>=0.28.1",
     "pandas>=2.3.3",
     "pdfplumber>=0.11.9",
@@ -15,6 +18,8 @@ dependencies = [
     "python-jobspy>=1.1.82",
     "pyyaml>=6.0.3",
     "rich>=15.0.0",
+    "sqlmodel>=0.0.21",
+    "uvicorn[standard]>=0.32.0",
 ]
 
 [tool.pytest.ini_options]

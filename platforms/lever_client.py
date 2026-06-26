@@ -4,6 +4,8 @@ import time
 import httpx
 from bs4 import BeautifulSoup
 
+from utils.text_utils import _clean
+
 logger = logging.getLogger(__name__)
 
 _BASE = "https://api.lever.co/v0/postings/{slug}?mode=json"
@@ -42,22 +44,26 @@ def fetch_lever_jobs(slugs: list[str], keywords: list[str]) -> list[dict]:
             categories = posting.get("categories") or {}
             team = categories.get("team", "") or ""
             description_plain = posting.get("descriptionPlain", "") or ""
-            description_text = BeautifulSoup(description_plain, "html.parser").get_text()
+            description_text = _clean(
+                BeautifulSoup(description_plain, "html.parser").get_text()
+            )
 
             combined = (title + " " + team + " " + description_text).lower()
             if not any(kw in combined for kw in lower_keywords):
                 continue
 
-            results.append({
-                "title": title,
-                "company": slug,
-                "location": categories.get("location", "") or "",
-                "description": description_text,
-                "url": posting.get("hostedUrl", "") or "",
-                "salary": "",
-                "date_posted": "",
-                "source": "lever",
-            })
+            results.append(
+                {
+                    "title": title,
+                    "company": slug,
+                    "location": categories.get("location", "") or "",
+                    "description": description_text,
+                    "url": posting.get("hostedUrl", "") or "",
+                    "salary": "",
+                    "date_posted": "",
+                    "source": "lever",
+                }
+            )
 
         time.sleep(_RATE_SLEEP)
 

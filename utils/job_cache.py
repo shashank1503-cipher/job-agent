@@ -2,6 +2,8 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
+from utils.text_utils import _clean
+
 CACHE_PATH = "output/jobs_cache.json"
 CACHE_TTL_HOURS = 72
 
@@ -36,7 +38,9 @@ class JobCache:
             json.dump(self._data, f, indent=2, default=str)
 
     def _evict_stale(self):
-        cutoff = (datetime.now(timezone.utc) - timedelta(hours=self.ttl_hours)).isoformat()
+        cutoff = (
+            datetime.now(timezone.utc) - timedelta(hours=self.ttl_hours)
+        ).isoformat()
         stale = [k for k, v in self._data.items() if v.get("cached_at", "") < cutoff]
         for k in stale:
             del self._data[k]
@@ -73,4 +77,9 @@ class JobCache:
             self._save()
 
     def all_jobs(self) -> list[dict]:
-        return list(self._data.values())
+        jobs = []
+        for job in self._data.values():
+            if "description" in job:
+                job = {**job, "description": _clean(job["description"])}
+            jobs.append(job)
+        return jobs

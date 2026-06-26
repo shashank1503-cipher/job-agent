@@ -1,0 +1,14 @@
+{
+    "skills": [
+        "Python", "Go", "FastAPI", "Django", "REST API", "Microservices",
+        "PostgreSQL", "Redis", "Docker", "Kubernetes", "AWS", "Elasticsearch",
+        "Celery", "RabbitMQ", "GraphQL", "TypeScript", "React"
+    ],
+    "years": 3,
+    "level": "mid",
+    "industries": ["Cybersecurity", "SaaS"],
+    "roles": [
+        "Software Engineer II", "Senior Software Engineer",
+        "Backend Engineer", "SDE II"
+    ]
+}

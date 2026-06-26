@@ -1,165 +1,170 @@
 preferences:
   roles:
-    - "Software Engineer II"
-    - "Senior Software Engineer"
-    - "Backend Engineer"
-    - "Software Development Engineer II"
-    - "SDE II"
-    - "Backend Developer"
-    - "Full Stack Engineer"
-
+  - Software Engineer II
+  - Senior Software Engineer
+  - Backend Engineer
+  - Software Development Engineer II
+  - SDE II
+  - Backend Developer
+  - Full Stack Engineer
   locations:
-    - "Remote"
-    - "Bangalore"
-    - "Delhi NCR"
-
-  # Remote jobs are only accepted if the listed country/region appears in the location.
-  # Jobs listed as plain "Remote" with no country are allowed through.
+  - Remote
+  - Bangalore
+  - Delhi NCR
   remote_locations:
-    - "India"
-    - "IN"
-
+  - India
+  - IN
   current_salary_lpa: 25
   expected_salary_lpa: 30
   min_salary_lpa: 28
   max_salary_lpa: 40
-
   industries:
-    - "Cybersecurity"
-    - "AI/ML"
-    - "Developer Tools"
-    - "FinTech"
-    - "SaaS"
-    - "HealthTech"
-
+  - Cybersecurity
+  - AI/ML
+  - Developer Tools
+  - FinTech
+  - SaaS
+  - HealthTech
+  exclude_locations:
+  - "USA"
+  - "United States"
+  - "US"
+  - "UK"
+  - "United Kingdom"
+  - "Singapore"
+  - "Europe"
+  - "Canada"
   exclude_companies:
-    - "Infosys"
-    - "Wipro"
-    - "TCS"
-    - "Cognizant"
-    - "Accenture"
-    - "HCL"
-    - "Tech Mahindra"
-
+  - Infosys
+  - Wipro
+  - TCS
+  - Cognizant
+  - Accenture
+  - HCL
+  - Tech Mahindra
   keywords_must_have:
-    - "Python"
-    - "Backend"
-    - "REST API"
-    - "Postgres"
-    - "Django"
-    - "FastAPI"
-    - "Microservices"
-
+  - Python
+  - Go
+  - Backend
   keywords_nice_to_have:
     tier1:
-      - "Django"
-      - "FastAPI"
-      - "Elasticsearch"
-      - "Microservices"
-      - "Kubernetes"
+    - FastAPI
+    - Elasticsearch
+    - Microservices
+    - Kubernetes
+    - Docker
+    - Django
+    - Microservices
+    - REST API
     tier2:
-      - "Go"
-      - "Golang"
-      - "React"
-      - "AWS"
-      - "Docker"
-
+    - Go
+    - React
+    - AWS
+    - MongoDB
+    - Node.js
   keywords_exclude:
-    - "PHP"
-    - "Ruby"
-    - ".NET"
-    - "SAP"
-    - "Mainframe"
-    - "Embedded Systems"
-
+  - PHP
+  - Ruby
+  - .NET
+  - SAP
+  - Mainframe
+  - Embedded Systems
   industry_keywords:
     Cybersecurity:
-      - "security"
-      - "threat"
-      - "SOC"
-      - "vulnerability"
-      - "SIEM"
-      - "pentest"
-      - "pen test"
-      - "cyware"
+    - security
+    - threat
+    - SOC
+    - vulnerability
+    - SIEM
+    - pentest
+    - pen test
+    - cyware
     AI/ML:
-      - "machine learning"
-      - "LLM"
-      - "artificial intelligence"
-      - "data science"
-      - "MLOps"
-      - "generative AI"
+    - machine learning
+    - LLM
+    - artificial intelligence
+    - data science
+    - MLOps
+    - generative AI
     Developer Tools:
-      - "developer platform"
-      - "devtools"
-      - "SDK"
-      - "developer experience"
-      - "DX"
-      - "CLI tool"
+    - developer platform
+    - devtools
+    - SDK
+    - developer experience
+    - DX
+    - CLI tool
     FinTech:
-      - "fintech"
-      - "payments"
-      - "banking"
-      - "financial services"
-      - "lending"
-      - "trading"
-      - "wallet"
+    - fintech
+    - payments
+    - banking
+    - financial services
+    - lending
+    - trading
+    - wallet
     SaaS:
-      - "SaaS"
-      - "multi-tenant"
-      - "subscription"
-      - "cloud platform"
-      - "B2B software"
+    - SaaS
+    - multi-tenant
+    - subscription
+    - cloud platform
+    - B2B software
     HealthTech:
-      - "healthtech"
-      - "healthcare"
-      - "medical"
-      - "clinical"
-      - "EHR"
-      - "patient"
-
+    - healthtech
+    - healthcare
+    - medical
+    - clinical
+    - EHR
+    - patient
   experience_level:
-    - "mid"
-    - "senior"
-    - "SDE II"
-    - "SDE III"
-
+  - mid
+  - senior
+  - SDE II
+  - SDE III
   employment_type:
-    - "full-time"
-
+  - full-time
   search:
     sites:
-      - linkedin
-      - indeed
+    - linkedin
+    - indeed
     results_per_role: 200
     hours_old: 72
-    country: "India"
+    country: India
     greenhouse_enabled: true
     lever_enabled: true
-
   experience_years:
-    min: 1
-    max: 4
-
+    min: 2
+    max: 5
   resume_variants:
-    - path: "data/resumes/resume_backend_python.pdf"
-      label: "Backend Python"
-      tags: ["Python", "Backend", "FastAPI", "Django", "REST API", "Microservices", "PostgreSQL", "Redis"]
-    - path: "data/resumes/resume_fullstack.pdf"
-      label: "Full Stack"
-      tags: ["Python", "React", "TypeScript", "Full Stack", "Frontend", "REST API", "Node.js"]
-
+  - path: data/resumes/resume_backend_python.pdf
+    label: Backend Python
+    tags:
+    - Python
+    - Backend
+    - FastAPI
+    - Django
+    - REST API
+    - Microservices
+    - PostgreSQL
+    - Redis
+  - path: data/resumes/resume_fullstack.pdf
+    label: Full Stack
+    tags:
+    - Python
+    - React
+    - TypeScript
+    - Full Stack
+    - Frontend
+    - REST API
+    - Node.js
   max_applications_per_day: 15
-  min_match_score: 70
-
+  # Recalibrate after first run with BM25+BERT scoring
+  min_match_score: 50
   personal_info:
-    name: "Shashank Srivastava"
-    email: "shashank.srivastava25sks@gmail.com"
-    phone: "+91-9793422020"
-    linkedin: "linkedin.com/in/shashank-srivastava1503/"
-    github: "github.com/shashank1503-cipher"
-    current_company: "Cyware Labs Pvt. Ltd."
-    current_location: "Bangalore"
+    name: Shashank Srivastava
+    email: shashank.srivastava25sks@gmail.com
+    phone: +91-9793422020
+    linkedin: linkedin.com/in/shashank-srivastava1503/
+    github: github.com/shashank1503-cipher
+    current_company: Cyware Labs Pvt. Ltd.
+    current_location: Bangalore
     notice_period_days: 60
     open_to_relocation: true
-
