@@ -9,10 +9,9 @@ An automated job search pipeline that scrapes listings, scores them against your
 - Python 3.11+
 - [uv](https://docs.astral.sh/uv/) for dependency management
 - [Node.js](https://nodejs.org/) 18+ (for the frontend)
-- An Anthropic API key (set as `ANTHROPIC_API_KEY` in `.env`)
+- Claude access — either an `ANTHROPIC_API_KEY` in `.env`, or [Claude Code](https://claude.ai/code) installed (used as a subprocess fallback if no key is set)
 
 ```sh
-cp .env.example .env   # then fill in your ANTHROPIC_API_KEY
 uv sync                # install Python dependencies
 cd frontend && npm install && cd ..
 ```
@@ -150,4 +149,4 @@ job-agent/
 
 | Variable | Required | Description |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | Yes | Claude API key (used by the match agent and resume parser) |
+| `ANTHROPIC_API_KEY` | No | Claude API key. If unset, the agent falls back to Claude Code as a subprocess. |
