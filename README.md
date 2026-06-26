@@ -1,154 +1,104 @@
 # job-agent
 
-An autonomous job application pipeline powered by Claude AI. It searches Greenhouse and Lever job boards, scores each posting against your preferences, tailors your resume to each role, and (optionally) fills and submits applications — all with a single command.
+An automated job search pipeline powered by Claude AI. It scrapes job boards, scores each listing against your preferences, and surfaces the best matches through a web dashboard — so you spend time applying, not searching.
 
-**Dry-run mode is on by default.** The agent will never submit a real application unless you explicitly pass both `--apply` and `--confirm`.
+---
+
+## How it works
+
+1. **Search** — scrapes LinkedIn, Indeed, Greenhouse, and Lever for open roles matching your titles and location filters.
+2. **Match & Score** — filters out hard disqualifiers (excluded companies, missing required skills, wrong location/salary), then scores the rest 0–100 using keyword matching and industry bonuses.
+3. **Persist** — writes qualifying jobs to a local SQLite database (`output/jobs.db`).
+4. **Review** — a React dashboard lets you browse scored jobs, track application status, and view past pipeline runs.
 
 ---
 
 ## Features
 
-- Searches Greenhouse and Lever APIs for open roles at your target companies
-- Scores each job against your preferences using Claude (0–100)
-- Filters out low-match jobs and saves them to `output/rejected_jobs.csv`
-- Tailors your resume for each qualifying job (rewrites summary + bullets, reorders skills)
-- Fills out application forms using Playwright (supports custom questions, dropdowns, file upload)
-- Takes a screenshot before any submission for review
-- Logs every result to `output/applications_log.csv`
-- Saves pipeline progress to `output/progress.json` so runs can be resumed
+- Searches LinkedIn, Indeed, Greenhouse API, and Lever API
+- Hard pre-filters: excluded companies, required keywords, location, salary range
+- Tiered keyword scoring: must-have skills + tier-1/tier-2 nice-to-haves
+- Industry bonus scoring (Cybersecurity, AI/ML, FinTech, etc.)
+- Local SQLite job database with a FastAPI backend
+- React + Tailwind dashboard (Jobs, Tracker, Runs views)
+- Resume PDF parser — feeds Claude your resume and proposes `preferences.yaml` updates
+- Local JSON job cache with configurable TTL to avoid redundant scrapes
+- Pre-commit hooks (ruff lint + format, YAML/JSON checks)
 
 ---
 
-## Installation
+## Quick start
 
-### 1. Clone and set up a virtual environment
+### 1. Clone and install
 
 ```bash
+git clone https://github.com/shashank1503-cipher/job-agent.git
 cd job-agent
-python3 -m venv .venv
-source .venv/bin/activate
+uv sync                        # install Python deps
+cd frontend && npm install && cd ..
 ```
 
-### 2. Install Python dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Install Playwright browsers
-
-```bash
-playwright install chromium
-```
-
----
-
-## Configuration
-
-### Step 1 — API key and personal info
-
-Copy `.env.example` to `.env` and fill in your values:
+### 2. Configure secrets
 
 ```bash
 cp .env.example .env
+# edit .env — set ANTHROPIC_API_KEY
 ```
 
-Edit `.env`:
+### 3. Edit preferences
 
-```
-ANTHROPIC_API_KEY=sk-ant-...
-DRY_RUN=true
-HEADLESS=false
+Open `data/preferences.yaml` and set your target roles, locations, salary range, required skills, and resume paths. See [USAGE.md](USAGE.md) for the full reference.
 
-FIRST_NAME=Jane
-LAST_NAME=Doe
-EMAIL=jane@example.com
-PHONE=+1-555-555-5555
-LINKEDIN_URL=https://linkedin.com/in/janedoe
-GITHUB_URL=https://github.com/janedoe
-PORTFOLIO_URL=https://janedoe.dev
-```
+### 4. Run the pipeline
 
-### Step 2 — Add your resume
-
-Place your resume at `data/resume.pdf` (or `data/resume.docx`). You can point to a different path with `--resume`.
-
-### Step 3 — Edit preferences
-
-Open `data/preferences.yaml` and customise:
-
-- `roles` — job titles you are targeting
-- `locations` — acceptable locations (include "Remote" if needed)
-- `keywords_must_have` — hard requirements; low score if missing
-- `keywords_nice_to_have` — bonus keywords
-- `min_match_score` — jobs below this score are skipped (default: 75)
-- `max_applications_per_day` — safety cap on daily submissions
-- `greenhouse_companies` — list of Greenhouse board slugs (the part after `boards.greenhouse.io/`)
-- `lever_companies` — list of Lever slugs (the part after `jobs.lever.co/`)
-
-Example company slugs:
-```yaml
-greenhouse_companies:
-  - stripe
-  - airbnb
-lever_companies:
-  - vercel
-  - notion
+```bash
+just search          # scrape + score + persist
+just api             # start the API on :8000
+just ui              # start the dashboard on :5173
+just dev             # api + ui together
 ```
 
 ---
 
-## Usage
+## Commands
 
-### Search and score only (no forms filled)
-
-```bash
-python main.py --search-only
-```
-
-### Dry run (fills forms, takes screenshots, does NOT submit)
-
-```bash
-python main.py --dry-run
-```
-
-This is also the **default** — running with no flags is equivalent to `--dry-run`.
-
-### Dry run with a custom resume or preferences file
-
-```bash
-python main.py --resume path/to/my_resume.pdf --prefs path/to/my_prefs.yaml --dry-run
-```
-
-### Live apply — submits real applications (use with caution)
-
-Both `--apply` AND `--confirm` are required to prevent accidental submissions:
-
-```bash
-python main.py --apply --confirm
-```
-
-If you pass `--apply` without `--confirm`, the agent prints a warning and exits without doing anything.
+| Command | Description |
+|---|---|
+| `just search` | Run the pipeline (uses cache if available) |
+| `just search refresh` | Force a fresh scrape |
+| `uv run python main.py --mock` | Test the pipeline with one fake job |
+| `just parse-resume <path>` | Parse a resume PDF and update preferences |
+| `just api` | Start FastAPI backend on port 8000 |
+| `just ui` | Start Vite/React frontend on port 5173 |
+| `just dev` | Start both together |
 
 ---
 
-## Output files
+## Project layout
 
-| Path | Contents |
-|------|----------|
-| `output/tailored_resumes/` | PDF resume tailored for each company/role |
-| `output/screenshots/` | Screenshot of each form before submission |
-| `output/applications_log.csv` | All application attempts with status |
-| `output/rejected_jobs.csv` | Jobs that scored below `min_match_score` |
-| `output/progress.json` | Pipeline state for resuming interrupted runs |
+```
+job-agent/
+├── main.py                  # pipeline entry point
+├── config.py                # global defaults
+├── data/
+│   └── preferences.yaml     # your job search config
+├── agents/
+│   ├── search_agent.py      # scrapes job boards
+│   └── match_agent.py       # scores and filters listings
+├── platforms/
+│   ├── greenhouse_client.py
+│   └── lever_client.py
+├── api/                     # FastAPI backend + SQLModel ORM
+├── frontend/                # Vite + React + Tailwind dashboard
+├── utils/
+│   ├── resume_parser.py     # PDF → preferences updater (Claude)
+│   ├── job_cache.py         # local JSON job cache
+│   └── text_utils.py
+└── tests/
+```
 
 ---
 
-## Safety notes
+## Documentation
 
-- `DRY_RUN=true` is the default in both `.env.example` and `config.py`.
-- The agent enforces a maximum of **5 applications per platform per hour** regardless of settings.
-- A random 3–7 second delay is added between each platform request.
-- Screenshots are always taken before any submit button is clicked.
-- The pipeline skips jobs already present in `applications_log.csv`, so it is safe to re-run.
-# job-agent
+See [USAGE.md](USAGE.md) for full setup instructions, configuration reference, and environment variable documentation.
