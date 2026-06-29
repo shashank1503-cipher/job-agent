@@ -17,26 +17,39 @@ def list_jobs(
     company: Optional[str] = None,
     session: Session = Depends(get_session),
 ):
-    jobs = job_repo.list_jobs(
+    groups = job_repo.list_jobs_grouped(
         session, score_min=score_min, source=source, company=company
     )
     return [
         {
-            "id": j.id,
-            "title": j.title,
-            "company": j.company,
-            "location": j.location,
-            "salary": j.salary,
-            "score": j.score,
-            "keyword_score": j.keyword_score,
-            "source": j.source,
-            "apply_url": j.apply_url,
-            "url": j.url,
-            "date_posted": j.date_posted,
-            "date_scraped": j.date_scraped,
-            "run_id": j.run_id,
+            "run": {
+                "id": run.id,
+                "started_at": run.started_at,
+                "finished_at": run.finished_at,
+                "jobs_fetched": run.jobs_fetched,
+                "jobs_qualified": run.jobs_qualified,
+                "jobs_rejected": run.jobs_rejected,
+            },
+            "jobs": [
+                {
+                    "id": j.id,
+                    "title": j.title,
+                    "company": j.company,
+                    "location": j.location,
+                    "salary": j.salary,
+                    "score": j.score,
+                    "keyword_score": j.keyword_score,
+                    "source": j.source,
+                    "apply_url": j.apply_url,
+                    "url": j.url,
+                    "date_posted": j.date_posted,
+                    "date_scraped": j.date_scraped,
+                    "run_id": j.run_id,
+                }
+                for j in jobs
+            ],
         }
-        for j in jobs
+        for run, jobs in groups
     ]
 
 
