@@ -85,7 +85,21 @@ def test_get_jobs_run_has_required_fields(client, test_engine):
 def test_get_jobs_job_has_required_fields(client, test_engine):
     _seed(test_engine)
     job = client.get("/jobs").json()[0]["jobs"][0]
-    for field in ("id", "title", "company", "score", "source", "apply_url", "run_id"):
+    for field in (
+        "id",
+        "title",
+        "company",
+        "location",
+        "salary",
+        "score",
+        "keyword_score",
+        "source",
+        "apply_url",
+        "url",
+        "date_posted",
+        "date_scraped",
+        "run_id",
+    ):
         assert field in job, f"Missing job field: {field}"
 
 
